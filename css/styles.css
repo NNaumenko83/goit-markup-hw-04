@@ -31,8 +31,9 @@
 	--main-background-color: #ffffff;
 	--header-border-line-color: #ececec;
 	--cards-border-color: #eeeeee;
+	--hero-background-color: #c4c4c4;
 
-	--container-outline: 1px solid red;
+	/* --container-outline: 1px solid red; */
 }
 
 /* Основні стилі */
@@ -234,10 +235,10 @@ button {
 }
 
 .section-hero {
-	background-color: #2f303a;
+	background-color: var(--hero-background-color);
 
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .section-hero-title {
@@ -273,9 +274,28 @@ button {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.overlay {
+	max-width: 1600px;
+	height: 600px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-top: 200px;
+	padding-bottom: 200px;
+	outline: var(--container-outline);
+
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url(../images/Hero-image_new.jpg);
+
+	background-size: cover;
+	background-position: center;
+}
 /* ---------ОСОБЛИВОСТІ РОБОТИ--------- */
 
 .features-list-box-icon {
+	display: flex;
+
 	width: 270px;
 	height: 120px;
 	margin: auto;
@@ -285,16 +305,10 @@ button {
 	background: #f5f4fa;
 	border-radius: 4px;
 
-	text-align: center;
-
-	padding-top: 25px;
-	padding-bottom: 25px;
+	justify-content: center;
+	align-items: center;
 
 	margin-bottom: 30px;
-}
-
-.features-list-icon {
-	margin: auto;
 }
 
 .section-features {
@@ -334,7 +348,8 @@ button {
 /* ---------ЧИМ МИ ЗАЙМАЄМОСЬ--------- */
 
 .section-about-title,
-.section-team-title {
+.section-team-title,
+.section-clients-title {
 	margin-bottom: 50px;
 
 	color: var(--title-text-color);
@@ -403,32 +418,66 @@ button {
 	padding: 30px 0;
 }
 
-.team-soc-link-list {
+.team-soc-link-list,
+.footer-soc-link-list {
 	display: flex;
 	outline: var(--container-outline);
 	justify-content: center;
 }
 
-.team-soc-link-item {
+.team-soc-link-item .link,
+.footer-soc-link-item .link {
+	display: flex;
 	width: 44px;
 	height: 44px;
 	outline: var(--container-outline);
 	border-radius: 50%;
 	text-align: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	justify-content: center;
+	align-items: center;
 }
 
-.team-soc-link-item + .team-soc-link-item {
+/* .team-soc-link-item {
+	display: block;
+	outline: var(--container-outline);
+} */
+
+.team-soc-link-item + .team-soc-link-item,
+.footer-soc-link-item + .footer-soc-link-item {
 	margin-left: 10px;
 }
-
-.team-soc-link-list .link {
-	width: 40px;
-	height: 40px;
+/* -----------------ПОСТІЙНІ КЛІЄНТИ----------------- */
+.clients-list {
+	display: flex;
+	justify-content: space-between;
 }
 
-/* Футер */
+.clients-list-link {
+	display: flex;
+	width: 170px;
+	height: 92px;
+
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	justify-content: center;
+	align-items: center;
+
+	/* outline: var(--container-outline); */
+}
+
+/* -----------------ФУТЕР----------------- */
+
+.footer-adress-container {
+	outline: var(--container-outline);
+	width: 231px;
+	margin-right: 70px;
+}
+
+.footer-container {
+	display: flex;
+}
+
 .adress {
 	max-width: 231px;
 }
@@ -463,6 +512,35 @@ button {
 
 .adress-list-item:not(:last-child) {
 	margin-bottom: 9px;
+}
+
+.footer-container {
+	display: flex;
+}
+
+.footer-soc-links-box {
+	display: flex;
+	margin-top: 15px;
+
+	flex-direction: column;
+
+	outline: var(--container-outline);
+}
+
+.pre-footer-soc-links {
+	margin-bottom: 20px;
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+
+	color: #ffffff;
+}
+
+.footer-soc-link-item .link {
+	background: rgba(255, 255, 255, 0.1);
 }
 
 /* ПОРТФОЛІО */
@@ -502,6 +580,8 @@ button {
 .portfolio-list-btn:focus {
 	color: var(--accent-button-color);
 	background-color: var(--accent-color);
+
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-buttons-list {
@@ -562,6 +642,18 @@ button {
 
 .project-list-item:not(:nth-last-child(-n + 3)) {
 	margin-bottom: 30px;
+}
+
+.project-list-link {
+	outline: var(--container-outline);
+}
+
+.project-list-link {
+	display: block;
+}
+
+.project-list-link:hover {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .visually-hidden {
