@@ -32,6 +32,9 @@
 	--header-border-line-color: #ececec;
 	--cards-border-color: #eeeeee;
 	--hero-background-color: #c4c4c4;
+	--company-list-color: #afb1b8;
+	--company-list-color-border: #afb1b8;
+	--team-soc-link-color: #afb1b8;
 
 	/* --container-outline: 1px solid red; */
 }
@@ -104,6 +107,10 @@ button {
 /* Прибираємо підкреслення у посилань */
 .link {
 	text-decoration: none;
+}
+
+.icon {
+	fill: currentColor;
 }
 
 /* Хедер */
@@ -425,16 +432,25 @@ button {
 	justify-content: center;
 }
 
+.team-soc-link-item .link {
+	color: var(--team-soc-link-color);
+}
+
+.team-soc-link-item .link:hover {
+	background: var(--accent-color);
+}
+
 .team-soc-link-item .link,
 .footer-soc-link-item .link {
 	display: flex;
-	width: 44px;
-	height: 44px;
-	outline: var(--container-outline);
-	border-radius: 50%;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+
+	width: 44px;
+	height: 44px;
+
+	border-radius: 50%;
 }
 
 /* .team-soc-link-item {
@@ -457,13 +473,19 @@ button {
 	width: 170px;
 	height: 92px;
 
-	border: 1px solid #afb1b8;
+	color: var(--company-list-color);
+	border: 1px solid var(--company-list-color-border);
 	border-radius: 4px;
 
 	justify-content: center;
 	align-items: center;
 
 	/* outline: var(--container-outline); */
+}
+
+.clients-list-link:hover {
+	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
 }
 
 /* -----------------ФУТЕР----------------- */
@@ -541,6 +563,10 @@ button {
 
 .footer-soc-link-item .link {
 	background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-link-item .link:hover {
+	background: #2196f3;
 }
 
 /* ПОРТФОЛІО */
