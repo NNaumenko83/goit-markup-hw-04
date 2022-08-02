@@ -429,15 +429,8 @@ button {
 	/* outline: var(--container-outline); */
 	justify-content: center;
 }
-
-.team-soc-link-item .link {
-	color: inherit;
-}
-
-.team-soc-link-item .link:hover,
-.team-soc-link-item .link:focus {
-	background: var(--accent-color);
-	color: #ffffff;
+.team-soc-link .icon {
+	fill: var(--team-soc-link-color);
 }
 
 .team-soc-link-item .link,
@@ -451,6 +444,17 @@ button {
 	height: 44px;
 
 	border-radius: 50%;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+	background: var(--accent-color);
+	color: #ffffff;
+}
+
+.team-soc-link:hover .icon,
+.team-soc-link:focus .icon {
+	fill: #ffffff;
 }
 
 /* .team-soc-link-item {
@@ -476,7 +480,6 @@ button {
 	color: var(--company-list-color);
 	border: 1px solid var(--company-list-color-border);
 	border-radius: 4px;
-	padding: 16px 32px;
 
 	justify-content: center;
 	align-items: center;
@@ -513,10 +516,6 @@ button {
 
 .adress-list .adress-link {
 	color: var(--third-text-color);
-}
-
-.adress-list {
-	margin: bottom 60px;
 }
 
 .adress-list .link:hover,
@@ -567,9 +566,18 @@ button {
 	background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-soc-link-item .link:hover,
-.footer-soc-link-item .link:focus {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
 	background: #2196f3;
+}
+
+.footer-soc-link .icon {
+	fill: #ffffff;
+}
+
+.footer-soc-link:hover .icon,
+.footer-soc-link:focus .icon {
+	fill: #ffffff;
 }
 
 /* ПОРТФОЛІО */
