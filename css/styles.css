@@ -56,7 +56,7 @@ body {
 
 	width: 1200px;
 
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 }
 
 .section {
@@ -183,7 +183,7 @@ button {
 
 /* Контакти */
 .contacts-list-item .link {
-	color: inherit;
+	color: currentColor;
 }
 
 .nav-link.link,
@@ -222,7 +222,7 @@ button {
 .contacts-list-item .icon {
 	display: inline-block;
 	width: 16px;
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 	margin-right: 5px;
 	align-items: center;
 }
@@ -290,7 +290,7 @@ button {
 
 	padding-top: 200px;
 	padding-bottom: 200px;
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url(../images/Hero-image_new.jpg);
@@ -307,7 +307,7 @@ button {
 	height: 120px;
 	margin: auto;
 
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 
 	background: #f5f4fa;
 	border-radius: 4px;
@@ -320,7 +320,6 @@ button {
 
 .section-features {
 	padding-bottom: 0;
-	outline: var(--outline);
 }
 
 .features-list-title {
@@ -417,7 +416,6 @@ button {
 }
 
 .team-item {
-	outline: var(--outline);
 	flex-basis: calc((100% - 30px * 3) / 4);
 }
 
@@ -428,16 +426,18 @@ button {
 .team-soc-link-list,
 .footer-soc-link-list {
 	display: flex;
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 	justify-content: center;
 }
 
 .team-soc-link-item .link {
-	color: var(--team-soc-link-color);
+	color: inherit;
 }
 
-.team-soc-link-item .link:hover {
+.team-soc-link-item .link:hover,
+.team-soc-link-item .link:focus {
 	background: var(--accent-color);
+	color: #ffffff;
 }
 
 .team-soc-link-item .link,
@@ -476,6 +476,7 @@ button {
 	color: var(--company-list-color);
 	border: 1px solid var(--company-list-color-border);
 	border-radius: 4px;
+	padding: 16px 32px;
 
 	justify-content: center;
 	align-items: center;
@@ -483,7 +484,8 @@ button {
 	/* outline: var(--container-outline); */
 }
 
-.clients-list-link:hover {
+.clients-list-link:hover,
+.clients-list-link:focus {
 	color: var(--accent-color);
 	border: 1px solid var(--accent-color);
 }
@@ -491,7 +493,7 @@ button {
 /* -----------------ФУТЕР----------------- */
 
 .footer-adress-container {
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 	width: 231px;
 	margin-right: 70px;
 }
@@ -518,7 +520,7 @@ button {
 }
 
 .adress-list .link:hover,
-.adress-list .linkk:focus {
+.adress-list .link:focus {
 	color: var(--accent-color);
 }
 
@@ -546,7 +548,7 @@ button {
 
 	flex-direction: column;
 
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 }
 
 .pre-footer-soc-links {
@@ -565,7 +567,8 @@ button {
 	background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-soc-link-item .link:hover {
+.footer-soc-link-item .link:hover,
+.footer-soc-link-item .link:focus {
 	background: #2196f3;
 }
 
@@ -671,14 +674,15 @@ button {
 }
 
 .project-list-link {
-	outline: var(--container-outline);
+	/* outline: var(--container-outline); */
 }
 
 .project-list-link {
 	display: block;
 }
 
-.project-list-link:hover {
+.project-list-link:hover,
+.project-list-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
