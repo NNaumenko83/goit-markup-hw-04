@@ -130,12 +130,6 @@ button {
 	margin-left: auto;
 }
 
-.contacts-list-item .link {
-	display: block;
-	padding-top: 32px;
-	padding-bottom: 32px;
-}
-
 .header-nav-list {
 	display: flex;
 }
@@ -188,16 +182,13 @@ button {
 
 .nav-link.link,
 .contacts-list-item .link {
-	font-family: inherit;
-	font-weight: 500;
-	font-size: inherit;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
-}
-
-.header-nav-list .link {
+	display: flex;
+	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
+	font-weight: 500;
+
+	letter-spacing: 0.02em;
 }
 
 .header-nav .logo-link {
@@ -220,17 +211,12 @@ button {
 }
 
 .contacts-list-item .icon {
-	display: inline-block;
 	width: 16px;
-	/* outline: var(--container-outline); */
-	margin-right: 5px;
-	align-items: center;
+	margin-right: 10px;
 }
 
-.contacts-list-item .link {
-	display: flex;
-	align-items: center;
-}
+/* .contacts-list-item .link {
+} */
 
 /* Заголовки секцій і списків */
 
@@ -239,13 +225,6 @@ button {
 .section-hero-title,
 .footer .logo-studio {
 	color: var(--third-text-color);
-}
-
-.section-hero {
-	background-color: var(--hero-background-color);
-
-	padding-top: 0px;
-	padding-bottom: 0px;
 }
 
 .section-hero-title {
@@ -290,13 +269,14 @@ button {
 
 	padding-top: 200px;
 	padding-bottom: 200px;
-	/* outline: var(--container-outline); */
 
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url(../images/Hero-image_new.jpg);
 
+	background-color: var(--hero-background-color);
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 /* ---------ОСОБЛИВОСТІ РОБОТИ--------- */
 
@@ -306,8 +286,6 @@ button {
 	width: 270px;
 	height: 120px;
 	margin: auto;
-
-	/* outline: var(--container-outline); */
 
 	background: #f5f4fa;
 	border-radius: 4px;
@@ -429,9 +407,6 @@ button {
 	/* outline: var(--container-outline); */
 	justify-content: center;
 }
-.team-soc-link .icon {
-	fill: var(--team-soc-link-color);
-}
 
 .team-soc-link-item .link,
 .footer-soc-link-item .link {
@@ -443,24 +418,15 @@ button {
 	width: 44px;
 	height: 44px;
 
+	color: var(--team-soc-link-color);
 	border-radius: 50%;
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-	background: var(--accent-color);
+	background-color: var(--accent-color);
 	color: #ffffff;
 }
-
-.team-soc-link:hover .icon,
-.team-soc-link:focus .icon {
-	fill: #ffffff;
-}
-
-/* .team-soc-link-item {
-	display: block;
-	outline: var(--container-outline);
-} */
 
 .team-soc-link-item + .team-soc-link-item,
 .footer-soc-link-item + .footer-soc-link-item {
@@ -483,8 +449,6 @@ button {
 
 	justify-content: center;
 	align-items: center;
-
-	/* outline: var(--container-outline); */
 }
 
 .clients-list-link:hover,
@@ -496,13 +460,12 @@ button {
 /* -----------------ФУТЕР----------------- */
 
 .footer-adress-container {
-	/* outline: var(--container-outline); */
-	width: 231px;
 	margin-right: 70px;
 }
 
 .footer-container {
 	display: flex;
+	align-items: baseline;
 }
 
 .adress {
@@ -535,19 +498,6 @@ button {
 
 .adress-list-item:not(:last-child) {
 	margin-bottom: 9px;
-}
-
-.footer-container {
-	display: flex;
-}
-
-.footer-soc-links-box {
-	display: flex;
-	margin-top: 15px;
-
-	flex-direction: column;
-
-	/* outline: var(--container-outline); */
 }
 
 .pre-footer-soc-links {
@@ -624,14 +574,9 @@ button {
 .portfolio-buttons-list {
 	display: flex;
 
-	text-align: center;
+	justify-content: center;
 
-	width: 575px;
-
-	padding-bottom: 16px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 34px;
+	margin-bottom: 50px;
 }
 
 .buttons-list-item:not(:last-child) {
@@ -679,10 +624,6 @@ button {
 
 .project-list-item:not(:nth-last-child(-n + 3)) {
 	margin-bottom: 30px;
-}
-
-.project-list-link {
-	/* outline: var(--container-outline); */
 }
 
 .project-list-link {
